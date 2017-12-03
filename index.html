@@ -3,24 +3,21 @@
 <head>
 	<title>Tero Poutala</title>
 	<link href="style.css" rel="stylesheet" type="text/css">
-
 </head>
-<body id="TOP">
+<body>
 
 <!-- Navigation -->
 <div class="navigation">
-		<ul>
-			<li><a href="#IMG"><b>PICTURES</b></a></li>
-			<li><a href="#AUDVID"><b>AUDIO AND VIDEOS</b></a></li>
-			<li><a href="#LOC"><b>MAP</b></a></li>
-            <li><a href="#DAD"><b>DRAG AND DROP</b></a></li>
-            <li><a href="#CONTACT"><b>CONTACT ME</b></a></li>
-		</ul>
+	<ul>
+		<li><a href="#IMG"><b>PICTURES</b></a></li>
+		<li><a href="#AUDVID"><b>AUDIO AND VIDEOS</b></a></li>
+		<li><a href="#LOC"><b>MAP</b></a></li>
+        <li><a href="#DRAG"><b>DRAG AND DROP</b></a></li>
+        <li><a href="#CONTACT"><b>CONTACT ME</b></a></li>
+	</ul>
 </div>
 
-<div>
-	
-	
+<div class="main-cont">
 	<h1>Hello world!</h1>
 	<p>Welcome to Tero Poutala's webpage.</p>
 	
@@ -60,7 +57,7 @@
 		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13883.113264590665!2d27.7212343!3d64.2176057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfi!2sfi!4v1512227078129" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 	</div>
     
-    <div id="DAD" class="drag-container">
+    <div id="DRAG" class="drag-container">
     	<p>If you are bored, drag the picture into the box.</p>
     	<div id="DROP" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         <br>
@@ -74,6 +71,7 @@
         	First name: <input type="text" name="firstName"> <br>
         	Last name: <input type="text" name="lastName"> <br>
         	Email: <input type="email" name="email"> <br>
+            <br>
             Message: <br> <textarea rows="10" cols="50" name="message"></textarea> <br>
             <input type="submit" value="Submit">
         </form>
@@ -100,7 +98,7 @@
         ev.target.appendChild(document.getElementById(data));
     }
     </script>
-    
+
     <!-- Form validation -script -->
     <script>
     function validateForm()
@@ -132,6 +130,6 @@
 		return true;
 	}
     </script>
-    
+
 </body>
 </html>
