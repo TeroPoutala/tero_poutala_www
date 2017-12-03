@@ -46,11 +46,35 @@ body
 	text-decoration: none;
 }
 
-.start
+.img-cont table tr
 {
-	position: absolute;
-	align-self: right;
-	padding-right: 50px;
-	height: 50px;
-	width: 50px;
+	background-color: #FFF;
+}
+
+.img-cont table, th, td
+{
+	border-collapse: collapse;	
+}
+
+.img-cont table tr th
+{
+	border: 1px solid #000;
+}
+
+.img-cont table tr td
+{
+	border: 1px solid #000;
+}
+
+.img-cont table tr td p
+{
+	padding: 0px 5px 0px 5px;	
+}
+
+#DROP
+{
+	width: 200px;
+	height: 67px;
+	padding: 5px;
+	border: 1px solid #000;
 }
