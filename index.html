@@ -3,27 +3,7 @@
 <head>
 	<title>Tero Poutala</title>
 	<link href="style.css" rel="stylesheet" type="text/css">
-    
-    <!-- Drag and Drop -script -->
-	<script>
-    function allowDrop(ev)
-    {
-        ev.preventDefault();
-    }
-    
-    function drag(ev)
-    {
-        ev.dataTransfer.setData("text", ex.target.id);
-    }
-    
-    function drop(ev)
-    {
-        ev.preventDefault();
-        var data = ev.dataTransfer.getData("text");
-        ev.target.appendChild(document.getElementById(data));
-    }
-    </script>
-    
+
 </head>
 <body id="TOP">
 
@@ -89,17 +69,69 @@
     
     <div id="CONTACT" class="contant">
     	<h1>Contact me</h1>
-        <p>With this form, you can contact me.</p>
-        <form>
-        	First name: <input type="text" name="first_name"> <br>
-        	Last name: <input type="text" name="last_name"> <br>
+        <p>With this form, you can contact me if needed.</p>
+        <form name="contactForm" method="post" onSubmit="return validateForm()">
+        	First name: <input type="text" name="firstName"> <br>
+        	Last name: <input type="text" name="lastName"> <br>
         	Email: <input type="email" name="email"> <br>
-            
+            Message: <br> <textarea rows="10" cols="50" name="message"></textarea> <br>
             <input type="submit" value="Submit">
         </form>
     </div>
 	
 </div>
 
+    <!-- Drag and Drop -script -->
+	<script>
+    function allowDrop(ev)
+    {
+        ev.preventDefault();
+    }
+    
+    function drag(ev)
+    {
+        ev.dataTransfer.setData("text", ex.target.id);
+    }
+    
+    function drop(ev)
+    {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+    </script>
+    
+    <!-- Form validation -script -->
+    <script>
+    function validateForm()
+	{
+		if(document.forms["contactForm"]["firstName"].value==null || document.forms["contactForm"]["firstName"].value=="")
+		{
+			alert("First name is empty!");
+			return false;
+		}
+		
+		if(document.forms["contactForm"]["lastName"].value==null || document.forms["contactForm"]["lastName"].value=="")
+		{
+			alert("Last name is empty!");
+			return false;
+		}
+		
+		if(document.forms["contactForm"]["email"].value==null || document.forms["contactForm"]["email"].value=="")
+		{
+			alert("Email is empty!");
+			return false;
+		}
+		
+		if(document.forms["contactForm"]["message"].value==null || document.forms["contactForm"]["message"].value=="")
+		{
+			alert("Message is empty!");
+			return false;
+		}
+		
+		return true;
+	}
+    </script>
+    
 </body>
 </html>
