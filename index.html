@@ -3,7 +3,7 @@
 <head>
 	<title>Tero Poutala's Webpage</title>
 	<link href="style.css" rel="stylesheet" type="text/css">
-	<meta name="Description" content="This page is Tero Poutala's portfolio page or maybe not.">
+	<meta name="Description" content="This page is Tero Poutala's portfolio page or will be someday.">
 	<meta name="Keywords" content="tero, poutala, portfolio">
 </head>
 <body>
@@ -21,7 +21,7 @@
 
 <div class="main-cont">
 	<h1>Hello world!</h1>
-	<p>Welcome to Tero Poutala's webpage.</p>
+	<p>Welcome to Tero Poutala's webpage. There will be stuff and things hopefully in the future.</p>
 	
 	<!-- Images goes here -->
 	<div id="IMG" class="img-cont">
@@ -43,7 +43,7 @@
 	</div>
 	
 	<!-- Videos goes here -->
-	<div id="AUDVID" class="video_container">
+	<div id="AUDVID" class="video-cont">
 		<h1>Audio and videos</h1>
         <h2>Audio</h2>
         <iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/342419243&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
@@ -53,32 +53,35 @@
 	</div>
 	
 	<!-- Map goes here -->
-	<div id="LOC" class="map_container">
+	<div id="LOC" class="map-cont">
 		<h1>Map</h1>
         <p>Here is the location of KAMK.</p>
 		<!-- Google Map -->
         <div id="map"></div>
 	</div>
     
-    <div id="DRAG" class="drag-container">
+    <div id="DRAG" class="drag-cont">
     	<h1>Drag and Drop</h1>
-    	<p>If you are bored, drag the picture into the box.</p>
+    	<p>If you are bored, you can drag the picture into the box.</p>
     	<div id="DROP" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         <br>
         <img id="drag1" src="img/terraria.jpg" draggable="true" ondragstart="drag(event)" width="200px" height="67px">
     </div>
     
-    <div id="CONTACT" class="contant">
+    <div id="CONTACT" class="contact">
     	<h1>Contact me</h1>
-        <p>With this form, you can contact me if needed.</p>
-        <form name="contactForm" method="post" onSubmit="return validateForm()">
-        	First name: <input type="text" name="firstName"> <br>
-        	Last name: <input type="text" name="lastName"> <br>
-        	Email: <input type="email" name="email"> <br>
-            <br>
-            Message: <br> <textarea rows="10" cols="50" name="message"></textarea> <br>
-            <input type="submit" value="Submit">
-        </form>
+        <p id="contact-msg">With this form, you can contact me if needed.</p>
+        <div id="contact-form">
+        	<form name="contactForm" method="post" onSubmit="return validateForm()">
+        		First name: <br> <input type="text" name="firstName"> <br>
+        		Last name: <br> <input type="text" name="lastName"> <br>
+        		Email: <br> <input type="email" name="email"> <br>
+            	<br>
+            	Message: <br> <textarea rows="10" cols="50" name="message"></textarea> <br>
+            	<input type="submit" value="Submit">
+        	</form>
+        </div>
+        
     </div>
 	
 </div>
